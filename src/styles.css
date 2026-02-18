@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-  color: #e0e0f0;
+  background: #0d0d0d;
+  color: #f0f0f0;
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   min-height: 100vh;
   margin: 0;
@@ -9,20 +10,23 @@ body {
 }
 
 html {
-  background: #18192a;
+  background: #0d0d0d;
   scroll-behavior: smooth;
 }
 
 /* Remove default input autofill color in dark mode */
 input, textarea {
-  background: #23243a;
-  border: 1.5px solid #35355a;
+  background: #111111;
+  color: #f0f0f0;
+  border: 1.5px solid #2a2a2a;
 }
 
 input:focus, textarea:focus {
+  border-color: #39ff14;
   outline: none;
 }
 
 ::selection {
-  color: #fff;
+  background: #39ff14;
+  color: #0d0d0d;
 }
