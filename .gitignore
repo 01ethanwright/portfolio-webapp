@@ -49,3 +49,4 @@ firebase.json
 firestore.indexes.json
 firestore.rules
 /src/environments
+/.firebase
