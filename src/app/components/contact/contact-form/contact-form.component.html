@@ -1,0 +1,30 @@
+<div class="modal-backdrop" (click)="close()" *ngIf="visible">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2>Contact Form</h2>
+        <form [formGroup]="contactForm" (ngSubmit)="submit()">
+            <label>
+                Name
+                <input formControlName="name" type="text" />
+                <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid">
+                    Name is required.
+                </div>
+            </label>
+            <label>
+                Email
+                <input formControlName="email" type="email" />
+                <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid">
+                    Valid email is required
+                </div>
+            </label>
+            <label>
+                Message
+                <textarea formControlName="message"></textarea>
+                <div *ngIf="contactForm.get('message')?.touched && contactForm.get('email')?.invalid">
+                    Message is required
+                </div>
+            </label>
+            <button type="submit">Send</button>
+            <button type="button" (click)="close()">Cancel</button>
+        </form>
+  </div>
+</div>

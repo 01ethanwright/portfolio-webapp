@@ -1,0 +1,17 @@
+<div class="projects-container" id="projects">
+  <h2>My Projects</h2>
+  
+  <div *ngIf="loading">Loading projects...</div>
+  <div *ngIf="error">{{ error }}</div>
+  
+  <div class="projects-grid" *ngIf="!loading && !error">
+    <div class="project-card" *ngFor="let project of projects">
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.description || 'No description available' }}</p>
+      <div class="project-stats">
+        <span *ngIf="project.language">{{ project.language }}</span>
+      </div>
+      <a [href]="project.html_url" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+</div>

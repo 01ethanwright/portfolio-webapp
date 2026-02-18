@@ -1,0 +1,185 @@
+/* ── Home ── gray dark theme, DOS-green accent ── */
+.cursor {
+    display: inline-block;
+    margin-left: 2px;
+    font-weight: 300;
+    color: #39ff14;
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: #0d0d0d;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.headshot {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #39ff14;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+    object-fit: cover;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.headshot:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 36px rgba(57, 255, 20, 0.5);
+}
+
+.intro {
+    margin-bottom: 0.5rem;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #888888;
+    margin: 0 0 0.5rem 0;
+    font-weight: 400;
+}
+
+.intro h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #f0f0f0;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.animated-typing {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animated-typing p {
+    font-size: 1.8rem;
+    color: #39ff14;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buttons button {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.buttons button:first-child {
+    background: #39ff14;
+    color: #0d0d0d;
+    border: 2px solid #39ff14;
+}
+
+.buttons button:first-child:hover {
+    background: transparent;
+    color: #39ff14;
+    box-shadow: 0 0 16px rgba(57, 255, 20, 0.4);
+}
+
+.buttons button:last-child {
+    background: transparent;
+    color: #39ff14;
+    border: 2px solid #39ff14;
+}
+
+.buttons button:last-child:hover {
+    background: #39ff14;
+    color: #0d0d0d;
+    box-shadow: 0 0 16px rgba(57, 255, 20, 0.4);
+}
+
+.button-link {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    background: transparent;
+    color: #39ff14;
+    border: 2px solid #39ff14;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.button-link:hover {
+    background: #39ff14;
+    color: #0d0d0d;
+    box-shadow: 0 0 16px rgba(57, 255, 20, 0.4);
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 1.5rem 0 0 0;
+    padding: 0;
+}
+
+.links a {
+    color: #888888;
+    transition: color 0.2s ease, filter 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.links a:hover {
+    color: #39ff14;
+    filter: drop-shadow(0 0 6px rgba(57, 255, 20, 0.6));
+}
+
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .animated-typing p {
+        font-size: 1.4rem;
+    }
+
+    .headshot {
+        width: 150px;
+        height: 150px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+
+    .links {
+        gap: 1.5rem;
+    }
+}

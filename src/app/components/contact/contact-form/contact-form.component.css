@@ -1,0 +1,126 @@
+/* Modern desktop modal styling for contact form */
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(44, 45, 70, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  background: #23243a;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  border-radius: 18px;
+  min-width: 380px;
+  max-width: 440px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 12px 48px rgba(44, 45, 70, 0.28);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.modal-content h2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 1.2rem 0;
+  text-align: center;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.modal-content label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: 600;
+  color: #8ec5fc;
+  font-size: 1.05rem;
+  gap: 0.3rem;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 0.8rem 1.1rem;
+  border: 1.5px solid #35355a;
+  border-radius: 9px;
+  font-size: 1.05rem;
+  font-family: inherit;
+  margin-top: 0.2rem;
+  transition: border 0.2s;
+  background: #18192a;
+  color: #e0e0f0;
+  box-sizing: border-box;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border: 1.5px solid #8ec5fc;
+  outline: none;
+}
+
+.modal-content textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.modal-content button[type="submit"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.10);
+  transition: all 0.3s ease;
+}
+
+.modal-content button[type="submit"]:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.18);
+}
+
+.modal-content button[type="button"] {
+  background: #35355a;
+  color: #8ec5fc;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.modal-content button[type="button"]:hover {
+  background: #8ec5fc;
+  color: #23243a;
+  transform: translateY(-2px);
+}
+
+.modal-content div[ng-reflect-ng-if],
+.modal-content div[ng-reflect-ng-if="true"] {
+  color: #ff6b6b;
+  font-size: 0.97rem;
+  margin-top: 0.2rem;
+}

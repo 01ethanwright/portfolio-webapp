@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  color: #e0e0f0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #18192a;
+  scroll-behavior: smooth;
+}
+
+/* Remove default input autofill color in dark mode */
+input, textarea {
+  background: #23243a;
+  border: 1.5px solid #35355a;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+::selection {
+  color: #fff;
+}
