@@ -116,6 +116,15 @@ body {
     padding-top: 80px;
 }
 
+/* Hide hamburger and mobile nav on desktop */
+.hamburger {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
+}
+
 .highlight::after {
     display: none !important;
 }
@@ -123,17 +132,80 @@ body {
 @media (max-width: 768px) {
     .navbar {
         padding: 1rem 1.5rem;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .sections {
-        gap: 1.5rem;
         flex-wrap: wrap;
-        justify-content: center;
+        align-items: center;
     }
 
-    .sections li {
-        font-size: 0.9rem;
+    .desktop-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 26px;
+        height: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1100;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #d4d4d4;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+
+    /* Animate to X when open */
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        background: #39ff14;
+    }
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+        background: #39ff14;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease, padding 0.35s ease;
+        padding: 0;
+        border-top: 0px solid #2a2a2a;
+    }
+
+    .mobile-nav.open {
+        max-height: 500px;
+        padding: 0.75rem 0;
+        border-top: 1px solid #2a2a2a;
+    }
+
+    .mobile-nav li {
+        padding: 0.85rem 0.5rem;
+        font-size: 1rem;
+        border-bottom: 1px solid #1e1e1e;
+        width: 100%;
+    }
+
+    .mobile-nav li.highlight {
+        margin-top: 0.5rem;
+        border-bottom: none;
+        display: inline-block;
+        width: auto;
+        align-self: flex-start;
     }
 }

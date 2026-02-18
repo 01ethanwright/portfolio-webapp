@@ -2,7 +2,27 @@
     <div class="logo-text">
         <h1 (click)="scrollTo('home')">Ethan Wright</h1>
     </div>
-    <ul class="sections">
+
+    <!-- Hamburger button (mobile only) -->
+    <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Desktop nav -->
+    <ul class="sections desktop-nav">
+        <li (click)="scrollTo('home')">Home</li>
+        <li (click)="scrollTo('about')">About</li>
+        <li (click)="scrollTo('experience')">Experience</li>
+        <li (click)="scrollTo('skills')">Skills</li>
+        <li (click)="scrollTo('projects')">Projects</li>
+        <li (click)="scrollTo('contact')">Contact</li>
+        <li class="highlight"><a href="/EthanWright_Resume-web.pdf" target="_blank">Resume</a></li>
+    </ul>
+
+    <!-- Mobile nav -->
+    <ul class="sections mobile-nav" [class.open]="menuOpen">
         <li (click)="scrollTo('home')">Home</li>
         <li (click)="scrollTo('about')">About</li>
         <li (click)="scrollTo('experience')">Experience</li>
